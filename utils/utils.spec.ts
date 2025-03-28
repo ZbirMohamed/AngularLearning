@@ -1,4 +1,4 @@
-import { range } from "./utils"
+import { pluck, range } from "./utils"
 
 describe('utils',()=>{
     describe('range',()=>{
@@ -9,8 +9,18 @@ describe('utils',()=>{
         )
         it('returns correct range from 1 to 1',
             () =>{
-                expect(range(1,1)).toEqual([0])
+                expect(range(1,1)).toEqual([])
             }
         )
+    })
+    describe('pluck',()=>{
+        it('returns correct id map range [1,2,3]',()=>{
+            const data = [
+                {id:1,name:'mohamed'},
+                {id:2,name:'youssef'},
+                {id:3,name:'rachid'},
+            ]
+            expect(pluck(data,'id')).toEqual([1,2,3])
+        })
     })
 })
