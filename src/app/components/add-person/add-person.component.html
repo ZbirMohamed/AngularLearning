@@ -1,15 +1,34 @@
 <form [formGroup]="staffForm" (ngSubmit)="onSubmit()">
-    <label for="nom">Nom:</label>
-    <input id="nom" formControlName="nom" />
+    <div>
+        <label for="nom">Nom:</label>
+        <input id="nom" formControlName="nom" />
+        @if(staffForm.controls['nom'].errors?.['required'] && staffForm.controls['nom'].touched ){
+            <span>*</span>
+        }
+    </div>
     <br />
-    <label for="prenom">Prénom:</label>
-    <input id="prenom" formControlName="prenom" />
+    <div>
+        <label for="prenom">Prénom:</label>
+        <input id="prenom" formControlName="prenom" />
+        @if(staffForm.controls['prenom'].touched ){
+            @if(staffForm.controls['prenom'].errors?.['required']){
+                <span>*</span>
+            }
+            @if(staffForm.controls['prenom'].errors?.['minlength']){
+                <span>min 5 car</span>
+            }
+        }
+    </div>
     <br />
-    <label for="salaire">Salaire:</label>
-    <input id="salaire" type="number" formControlName="salaire" />
+    <div>
+        <label for="salaire">Salaire:</label>
+        <input id="salaire" type="number" formControlName="salaire" />
+    </div>
     <br />
-    <label for="age">Âge:</label>
-    <input id="age" type="number" formControlName="age" />
+    <div>
+        <label for="age">Âge:</label>
+        <input id="age" type="number" formControlName="age" />
+    </div>
     <br />
     <button type="submit">Ajouter</button>
 </form>
