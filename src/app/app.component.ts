@@ -2,9 +2,11 @@ import { Component, computed, signal } from '@angular/core';
 import { Persone } from './models/Persone.module';
 import { PersonsListComponent } from './components/persons-list/persons-list.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { AddPersonComponent } from "./components/add-person/add-person.component";
+import { RouterLink, RouterOutlet } from '@angular/router';
 @Component({
   selector: 'app-root',
-  imports: [PersonsListComponent,DashboardComponent],
+  imports: [RouterLink,RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })

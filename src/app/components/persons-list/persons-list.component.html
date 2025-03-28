@@ -11,6 +11,7 @@
           <td> {{person.prenom}} </td>
           <td> {{person.age}} </td>
           <td> <button  (click)="select(person)" > {{ person.mature? "mature":"jeune" }}  </button> </td>
+          <td> <button (click)="deleteStaff(person)" > Delete  </button> </td>
         </tr>
       }
     </tbody>

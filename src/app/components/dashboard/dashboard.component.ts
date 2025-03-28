@@ -1,9 +1,10 @@
 import { Component, computed } from '@angular/core';
 import { PersonsService } from '../../services/persons.service';
+import { PersonsListComponent } from '../persons-list/persons-list.component';
 
 @Component({
   selector: 'app-dashboard',
-  imports: [],
+  imports: [PersonsListComponent],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css'
 })

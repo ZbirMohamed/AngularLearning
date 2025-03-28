@@ -19,4 +19,8 @@ export class PersonsListComponent {
    this.personService.select(persone);   
   }
 
+  deleteStaff(persone:Persone){
+   this.personService.deleteStaff(persone); 
+  }
+
 }

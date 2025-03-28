@@ -1,0 +1,16 @@
+<form [formGroup]="staffForm" (ngSubmit)="onSubmit()">
+    <label for="nom">Nom:</label>
+    <input id="nom" formControlName="nom" />
+    <br />
+    <label for="prenom">Prénom:</label>
+    <input id="prenom" formControlName="prenom" />
+    <br />
+    <label for="salaire">Salaire:</label>
+    <input id="salaire" type="number" formControlName="salaire" />
+    <br />
+    <label for="age">Âge:</label>
+    <input id="age" type="number" formControlName="age" />
+    <br />
+    <button type="submit">Ajouter</button>
+</form>
+  

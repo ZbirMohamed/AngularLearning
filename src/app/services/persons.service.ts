@@ -34,6 +34,18 @@ export class PersonsService {
     );
   }
 
+  public deleteStaff(persone:Persone){
+    this.personState.update(state=>
+      state.filter( p=>
+        p.id != persone.id
+      )
+    )
+  }
+
+  public saveStaff(person:Persone){
+    person.id = (this.getAllProducys().at(this.getAllProducys().length - 1)?.id || 0) + 1;
+    this.personState.update(state => [...state,person]);
+  }
 
 
 }

@@ -4,5 +4,6 @@ import { provideRouter } from '@angular/router';
 import { routes } from './app.routes';
 
 export const appConfig: ApplicationConfig = {
+  // in here we pass the routing config
   providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes)]
 };
