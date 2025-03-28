@@ -1,0 +1,17 @@
+<table>
+    <thead>
+      <th>nom</th>
+      <th>prenom</th>
+      <th>age</th>
+    </thead>
+    <tbody>
+      @for (person of persons(); track $index) {
+        <tr>
+          <td> {{person.nom}} </td>
+          <td> {{person.prenom}} </td>
+          <td> {{person.age}} </td>
+          <td> <button  (click)="select(person)" > {{ person.mature? "mature":"jeune" }}  </button> </td>
+        </tr>
+      }
+    </tbody>
+</table>

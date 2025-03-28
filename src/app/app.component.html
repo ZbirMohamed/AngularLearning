@@ -1,19 +1,8 @@
 <div>
   <h1>Hello World</h1>
+  
+  <app-dashboard />
 
-  <div>
-    <p>Bonjoue c'est une partie test de rendue Angular</p>
+  <app-persons-list />
 
-    <h3>Voici ma state {{ title }}</h3>
-
-    @for (item of list; track $index) {
-    <ul (key)="($index)">
-      <li>{{ item.age }}</li>
-      <li>{{ item.nom }}</li>
-      <li>{{ item.prenom }}</li>
-    </ul>
-    }
-  </div>
 </div>
-
-<router-outlet />
